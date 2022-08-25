@@ -30,7 +30,21 @@ function addUser(newUser){
     .then(data => alertApi.textContent = data)
     .catch(error => console.error(error))
 
+}
 
+
+function updatedUser(updatedUser){
+    fetch(`${url}/1` ,  {
+       method: 'PUT',
+       body: JSON.stringify(updatedUser),
+       headers: {
+        "Content-Type": "application/json; charset=utf-8"
+       } 
+    })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.error(error))
+    
 
 
 }
@@ -41,9 +55,21 @@ const newUser = {
     city: "Salvador"
 }
 
+const updatedUser = {
+    nome : "Marcelo Marques",
+    avatar : "https://picsum.photos/200/300",
+    city : "Rio de Fevereiro"
+}
+
+
+
+
 
 
 getUsers();
+
 getUser();
 
 addUser(newUser);
+
+//updatedUser(updatedUser)
