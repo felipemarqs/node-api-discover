@@ -68,8 +68,8 @@ const updatedUser = {
 
 getUsers();
 
-getUser();
+//getUser();
 
-addUser(newUser);
+//addUser(newUser);
 
 //updatedUser(updatedUser)
